@@ -5,4 +5,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ExampleEntityRepository extends JpaRepository<ExampleEntity, Long> {
+
+    ExampleEntity findByFirstName(String firstName);
+
+    ExampleEntity findByLastName(String lastName);
+
+    ExampleEntity findByEmail(String email);
 }
