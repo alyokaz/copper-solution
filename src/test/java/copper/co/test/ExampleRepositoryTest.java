@@ -28,19 +28,19 @@ class ExampleRepositoryTest {
     @Test
     public void canGetByFirstName() {
         ExampleEntity returnedEntity = testRepository.findByFirstName(entity.getFirstName());
-        assertThat(entity.getFirstName().equals(returnedEntity.getFirstName()));
+        assertThat(entity.getFirstName()).isEqualTo((returnedEntity.getFirstName()));
     }
 
     @Test
     public void canGetByLastName() {
         ExampleEntity returnedEntity = testRepository.findByLastName(entity.getLastName());
-        assertThat(entity.getLastName().equals(returnedEntity.getLastName()));
+        assertThat(entity.getLastName()).isEqualTo(returnedEntity.getLastName());
     }
 
     @Test
     public void getGetByEmail() {
         ExampleEntity returnedEntity = testRepository.findByEmail(entity.getEmail());
-        assertThat(entity.getEmail().equals(returnedEntity.getEmail()));
+        assertThat(entity.getEmail()).isEqualTo(returnedEntity.getEmail());
     }
 
 
